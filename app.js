@@ -9,7 +9,7 @@ app.get("/activate-signal", (req, res) =>{
 
 app.get("/deactivate-signal", (req, res) =>{
     console.log('chegou get deactivate')
-    res.send({deactivate: 'get deactivate'})
+    res.json({deactivate: 'get deactivate'})
 })
 
 
