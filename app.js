@@ -4,12 +4,12 @@ const PORT = process.env.PORT || 3000;
 
 app.get("/activate-signal", (req, res) =>{
     console.log('chegou get activate')
-    res.send({deactive: 'get activate'})
+    res.send({active: 'get activate'})
 })
 
 app.get("/deactivate-signal", (req, res) =>{
     console.log('chegou get deactivate')
-    res.send({deactive: 'get deactivate'})
+    res.send({deactivate: 'get deactivate'})
 })
 
 
