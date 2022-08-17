@@ -2,19 +2,24 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) =>{
-    console.log('chegou get')
+app.get("/activate-signal", (req, res) =>{
+    console.log('chegou get activate')
+    res.send({active: 'recebi get'})
+})
+
+app.get("/deactivate-signal", (req, res) =>{
+    console.log('chegou get deactivate')
     res.send({active: 'recebi get'})
 })
 
 
-app.post("/activate-signal", (req, res) =>{
+app.post("/activate", (req, res) =>{
     console.log('chegou post active')
     res.send({active: 'received'})
 })
 
 
-app.post("/deactivate-signal", (req, res) =>{
+app.post("/deactivate", (req, res) =>{
     console.log('chegou post active')
     res.send({deactivate: 'received'})
 })
